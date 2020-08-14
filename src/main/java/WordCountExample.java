@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 
 public class WordCountExample {
 
+    private static final String CONSUMER_GROUP = "wordcount-example";
     private static final String OUTPUT_TOPIC = "word-count-output-topic";
     private static String INPUT_TOPIC = "word-count-input-topic";
 
@@ -53,7 +54,7 @@ public class WordCountExample {
         final Properties streamsConfiguration = new Properties();
         // Give the Streams application a unique name.  The name must be unique in the Kafka cluster
         // against which the application is run.
-        streamsConfiguration.put(StreamsConfig.APPLICATION_ID_CONFIG, "wordcount-example");
+        streamsConfiguration.put(StreamsConfig.APPLICATION_ID_CONFIG, CONSUMER_GROUP);
         streamsConfiguration.put(StreamsConfig.CLIENT_ID_CONFIG, "wordcount-example-client");
         // Where to find Kafka broker(s).
         streamsConfiguration.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
