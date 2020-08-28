@@ -13,6 +13,8 @@ In order to spin it up just run `docker-compose up` and you'll get a Kakfa and Z
 
 #### List the topics
 
+Topic name: `word-count-input-topic`
+
 `$ docker exec docker_kafka_1 /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list`
 
 

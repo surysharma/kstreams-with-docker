@@ -15,4 +15,5 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: >-
         word-count-input-topic:3:1,
-        word-count-output-topic:3:1
+        word-count-output-topic:3:1,
+        twitter-input-topic:3:1
